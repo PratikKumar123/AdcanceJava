@@ -1,0 +1,26 @@
+package Task2;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class Delete {
+
+	public void delete() throws SQLException {
+		
+		Connection c = Connection1.getCon();
+
+		Scanner sc = new Scanner(System.in);
+
+
+		System.out.println("Enter the  name  which you want to delete:");
+		String s1 = sc.next();
+
+
+		PreparedStatement p = c.prepareStatement("delete from crud_op where name=?");
+
+		p.setString(1, s1);
+		
+	}
+}

@@ -1,0 +1,59 @@
+package loginsystem;
+
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+import Task1.ConnectionManager;
+
+public class User {
+
+	public void insert() throws SQLException {
+		Scanner sc = new Scanner(System.in);
+		try {
+		Connection con = ConnectionManager.getConnection();
+		
+		Statement s=con.createStatement();  
+//		PreparedStatement p=con.prepareStatement("select userName,userPass from userdetails"); 
+		
+		ResultSet rs=s.executeQuery("select userName,userPass from userdetails"); 
+		
+		String s1 = rs.getString(2);
+		String s2 = rs.getString(3);
+		
+		System.out.println(s1 + " "+s2);
+//		while(rs.next())
+//		{ 
+//		System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));  
+//		
+//		}
+		
+		
+		
+		
+		
+		
+//        System.out.println("Enter username: ");
+//        String uName=sc.next();
+//        
+//        System.out.println("Enter pass: ");
+//        String Upass=sc.next();
+//  
+//        p.setString(1, uName);
+//        p.setString(2, Upass);
+			
+		      
+		
+		
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

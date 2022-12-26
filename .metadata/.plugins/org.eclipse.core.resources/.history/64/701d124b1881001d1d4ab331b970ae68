@@ -1,0 +1,26 @@
+package Task1;
+
+import java.sql.SQLException;
+
+public class Main {
+	public static void main(String[] args) throws SQLException {
+
+		System.out.println("Click 1 to Insert Data :");
+		System.out.println("Click 2 to Update Data :");
+		System.out.println("Click 3 to delete Data :");
+		Insert r = new Insert();
+		r.insert();
+		
+		
+		
+		Update u = new Update();
+		u.update();
+		
+		Read a = new Read();
+		a.alldata();
+		
+//		Delete d = new Delete();
+//		d.delete();
+		
+	}
+}

@@ -1,0 +1,27 @@
+package Task1;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Reading {
+	
+	public void insert() throws SQLException {
+		Connection con = ConnectionManager.getConnection();
+		Statement stmt = con.createStatement();
+		try {
+//		stmt.executeUpdate("INSERT INTO studdetails (id ,studName, Address,Designation)"
+//				+ " VALUES(1,'Pratik','Hyderabad','Java')");
+			
+		System.out.println(stmt.executeUpdate("INSERT INTO studdetails (id ,studName, Address,Designation)"
+				+ " VALUES(2,'Kumar','Bhatt','react')"));
+		
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+
+}

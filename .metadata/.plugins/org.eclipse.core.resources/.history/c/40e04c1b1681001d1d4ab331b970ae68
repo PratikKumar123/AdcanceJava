@@ -1,0 +1,29 @@
+package Task1;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Insert {
+
+	public void insert() throws SQLException {
+		Connection con = ConnectionManager.getConnection();
+		Statement stmt = con.createStatement();
+		try {
+
+			int check = stmt.executeUpdate("INSERT INTO studdetails (id ,studName, Address,Designation)"
+					+ " VALUES(3,'Suman','Kolkata','Nodejs'),(4,'Golu','Bokaro','Python'),(5,'Rishkesh','Odisha','AEM') ");
+
+			if (check == 0) {
+				System.out.println("Not Inserted");
+			} else {
+				System.out.println("Data inserted successfully :");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

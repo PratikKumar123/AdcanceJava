@@ -1,0 +1,10 @@
+
+_
+java:S1481"'Remove this unused "sc" local variable.(ğÛ²¸øÿÿÿÿ8¦ĞùÃÓ0H¯RMINORZ
+CODE_SMELL
+e
+java:S4925"-Remove this "Class.forName()", it is useless.(¹µÖÁüÿÿÿÿ8§ĞùÃÓ0H±RMAJORZ
+CODE_SMELL
+Y
+java:S1481"&Remove this unused "s" local variable.(Ïå¯8§ĞùÃÓ0H²RMINORZ
+CODE_SMELL
