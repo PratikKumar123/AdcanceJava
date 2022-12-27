@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -36,7 +37,11 @@ public class SignUp extends HttpServlet {
 			int i = p.executeUpdate();
 
 			if (i == 1) {
-				out.println("Record inserted successfully!!");
+				out.println("Registration  successfully!!");
+				RequestDispatcher rf = request.getRequestDispatcher("login.html");
+				rf.forward(request, response);
+			}else {
+				out.println("Registration  error!!");
 			}
 
 		} catch (Exception e) {

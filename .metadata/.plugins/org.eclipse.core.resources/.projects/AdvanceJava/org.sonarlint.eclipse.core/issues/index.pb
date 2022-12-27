@@ -35,3 +35,5 @@ E
 src/Task2/Update.java,1\6\16f2cb1d97b99e1b0973c5b515a7738afe779278
 C
 src/Task2/Main.java,0\2\02ba9458f0c21b28db3a479b2104d6b67f051e9f
+[
++src/TransacationManagement/Transaction.java,7\2\7297c7c77136e8323af7662f8f49291949f81af9
