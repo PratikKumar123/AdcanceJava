@@ -13,10 +13,27 @@
   <servlet>
   	<servlet-name>abc</servlet-name>
   	<servlet-class>com.login.HelloServlet</servlet-class>
+  	<init-param>
+  	
+  	<param-name>newName</param-name>
+  	<param-value>Helo this is pratik</param-value>
+  	
+  	</init-param>
+  	
   </servlet>
   
   <servlet-mapping>
   	<servlet-name>abc</servlet-name>
   	<url-pattern>/hello</url-pattern>
   </servlet-mapping>
+  
+  <context-param>
+  
+  <param-name>name</param-name>
+  <param-value>Pratik_Bhatt</param-value>
+  
+  </context-param>
+  
+  
+  
 </web-app>

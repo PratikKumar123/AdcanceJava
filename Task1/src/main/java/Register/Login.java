@@ -15,32 +15,29 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Login extends HttpServlet {
 
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		PrintWriter out = response.getWriter();
 		String email = request.getParameter("lemail");
 		String pass = request.getParameter("lpwd");
-		
+
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/signup", "root", "root");
 
 			PreparedStatement p = con.prepareStatement("select userEmail,userPass from registrationdata");
-			
+
 			ResultSet r = p.executeQuery();
-			while(r.next()) {
-				
-				if(email.equals(r.getString("userEmail")) && pass.equals(r.getString("userPass"))){
-					out.println("Login Successfully !!");
-					RequestDispatcher rf = request.getRequestDispatcher("welcome.html");
-					rf.forward(request, response);
-				}else {
-					out.println("Error !!");
-				}
+
+			if (email.equals(r.getString("userEmail")) && pass.equals(r.getString("userPass"))) {
+				out.println("Login Successfully !!");
+				RequestDispatcher rf = request.getRequestDispatcher("welcome.html");
+				rf.forward(request, response);
+			} else {
+				out.println("Error !!");
 			}
-			
-			
+
 			int i = p.executeUpdate();
 
 			if (i == 1) {
@@ -50,7 +47,7 @@ public class Login extends HttpServlet {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-		
+
 	}
 
 }

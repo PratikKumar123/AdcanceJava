@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.GenericServlet;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -21,9 +23,18 @@ public class HelloServlet extends GenericServlet {
 	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException 
 	{
 		String name = req.getParameter("name");
-		PrintWriter pWriter =  res.getWriter();
-		pWriter.println("Welcome "+name);
+		PrintWriter pw =  res.getWriter();
+		pw.println("Welcome "+name);
 		
+		ServletContext context=getServletContext();  
+		   
+		String Name=context.getInitParameter("name");  
+		pw.println("name is="+Name);
+		
+		ServletConfig sc=getServletConfig();  
+		  
+		String newName=sc.getInitParameter("newName");  
+		pw.println("new name is="+newName);
 	}
 	
 

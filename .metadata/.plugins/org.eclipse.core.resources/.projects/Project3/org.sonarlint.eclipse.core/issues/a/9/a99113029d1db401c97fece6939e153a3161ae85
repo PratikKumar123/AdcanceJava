@@ -1,14 +1,15 @@
 
-x
-java:S1128
-"@Remove this unused import 'javax.servlet.annotation.WebServlet'.(™ì¢´şÿÿÿÿ8„ğ†îÔ0HšRMINORZ
+ˆ	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í—½¸ÿÿÿÿÿ8Ç“›ÂÕ0H½RMINORZ
 CODE_SMELL
-v
-java:S1128"CRemove this unused import 'javax.servlet.http.HttpServletResponse'.(Á¨ïë8š¬ßíÔ0HÌRMINORZ
+x
+java:S1128"@Remove this unused import 'javax.servlet.annotation.WebServlet'.(™ì¢´şÿÿÿÿ8½ÂÕ0HÃRMINORZ
 CODE_SMELL
 s
-java:S1128";Remove this unused import 'javax.servlet.http.HttpServlet'.(û÷Å›ÿÿÿÿÿ8š¬ßíÔ0HÈRMINORZ
+java:S1128";Remove this unused import 'javax.servlet.http.HttpServlet'.(û÷Å›ÿÿÿÿÿ8½ÂÕ0HÅRMINORZ
 CODE_SMELL
 u
-java:S1128"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8š¬ßíÔ0HÊRMINORZ
+java:S1128"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8½ÂÕ0HÇRMINORZ
+CODE_SMELL
+v
+java:S1128"CRemove this unused import 'javax.servlet.http.HttpServletResponse'.(Á¨ïë8½ÂÕ0HÉRMINORZ
 CODE_SMELL

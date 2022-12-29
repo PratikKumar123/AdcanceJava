@@ -1,8 +1,4 @@
 
-I
-src/main/webapp/inde.html,e\8\e860f5a6997494b656ee42ea51e66ece9a4a67fe
-J
-src/main/webapp/index.html,1\3\1337d72a3b1928dba82aa5210f5cdc0e88ce895b
 H
 src/main/webapp/pra.html,4\4\443ae34d35713a3c17c94cc83b2052c26ec067d9
 O
