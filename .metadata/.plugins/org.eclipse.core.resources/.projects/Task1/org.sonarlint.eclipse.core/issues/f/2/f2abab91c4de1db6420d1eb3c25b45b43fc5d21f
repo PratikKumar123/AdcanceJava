@@ -1,6 +1,6 @@
 
-f
-java:S1161":Add the "@Override" annotation above this method signature(‹¨¯¿H’	RMAJORZ
-CODE_SMELL
 „
-java:S1989"PHandle the following exception that could be thrown by "getWriter": IOException.(ïô†úÿÿÿÿH‘	RMINORZVULNERABILITY
+java:S1989"PHandle the following exception that could be thrown by "getWriter": IOException.(ïô†úÿÿÿÿHºRMINORZVULNERABILITY
+f
+java:S1161":Add the "@Override" annotation above this method signature(‹¨¯¿H»RMAJORZ
+CODE_SMELL
