@@ -1,0 +1,63 @@
+package com.ManyToOne;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+
+public class Mainn {
+	public static void main(String[] args) {
+		
+		Configuration cfg = new Configuration();
+    	cfg.configure("hibernate.cfg.xml");
+        SessionFactory factory = cfg.buildSessionFactory();
+        
+        Question q = new Question();
+        q.setQuestionId(1);
+        q.setQuestion("What is java ");
+        
+        Answer a = new Answer();
+        a.setAnswerId(101);
+        a.setAnswer("Java is programming language");
+        a.setQue(q);
+        
+        
+        Answer a1 = new Answer();
+        a1.setAnswerId(102);
+        a1.setAnswer("Java is independent language");
+        a1.setQue(q);
+        
+        List<Answer> l = new ArrayList<Answer>();
+        l.add(a);
+        l.add(a1);
+        
+        q.setAns(l);
+        
+        
+        Session session = factory.openSession();
+        Transaction t = session.beginTransaction();
+
+        session.save(q);
+        session.save(a);
+        session.save(a1);
+        
+        Question q1 = (Question)session.get(Question.class,1);
+        System.out.println(q1.getQuestion());
+        
+        for(Answer ans : q1.getAns()) {
+        	System.out.println(ans.getAnswer());
+        }
+        
+        t.commit();
+        
+        session.close();
+        
+        
+        factory.close();
+	}
+
+}

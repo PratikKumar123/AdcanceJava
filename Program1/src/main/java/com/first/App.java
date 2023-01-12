@@ -51,6 +51,9 @@ public class App
         session.save(a);
         
         t.commit();
+        
+        
+        
         session.close();
         
     } 

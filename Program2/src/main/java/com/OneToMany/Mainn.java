@@ -30,6 +30,12 @@ public class Mainn {
         
         
         t.commit();
+        
+        
+        Question newq = (Question)session.get(Question.class, 1);
+        System.out.println(newq.getQuestion());
+        System.out.println(newq.getAns().getAnswer());
+        
         session.close();
         
         
