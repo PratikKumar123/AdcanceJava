@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.collections.Employee" name="emp">
+		<property name="name">
+			<value>Pratik</value>
+		</property>
+
+		<property name="phones">
+			<list>
+				<value>937073</value>
+				<value>937073</value>
+				<value>937073</value>
+				<value>937073</value>
+			</list>
+		</property>
+
+		<property name="address">
+			<set>
+
+				<value>Hyderabad</value>
+				<value>Kolkata</value>
+				<value>Bhubaneswar</value>
+				<value>Banglore</value>
+			</set>
+		</property>
+
+		<property name="courses">
+
+			<map>
+				<entry key=" Java" value="2 Months" />
+				<entry key=" C++" value="3 Months" />
+				<entry key=" Kotlin" value="4 Months" />
+				<entry key=" Python" value="5 Months" />
+			</map>
+
+		</property>
+	</bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>
+ 
+ 
+ 
