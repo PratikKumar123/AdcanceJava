@@ -16,21 +16,24 @@ public class Question {
 	@Id
 	@Column(name = "q_id")
 	private int questionId;
-	
+
 	private String question;
-	
-	@OneToMany(mappedBy = "que",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+
+	@OneToMany(mappedBy = "que", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Answer> ans;
-	
+
 	public int getQuestionId() {
 		return questionId;
 	}
+
 	public void setQuestionId(int questionId) {
 		this.questionId = questionId;
 	}
+
 	public String getQuestion() {
 		return question;
 	}
+
 	public void setQuestion(String question) {
 		this.question = question;
 	}
@@ -38,13 +41,16 @@ public class Question {
 	public List<Answer> getAns() {
 		return ans;
 	}
+
 	public void setAns(List<Answer> ans) {
 		this.ans = ans;
 	}
+
 	public Question() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
 	public Question(int questionId, String question, List<Answer> ans) {
 		super();
 		this.questionId = questionId;
@@ -52,7 +58,4 @@ public class Question {
 		this.ans = ans;
 	}
 
-	
-
-	
 }

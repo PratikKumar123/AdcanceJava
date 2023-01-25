@@ -12,9 +12,7 @@ public class Answer {
 	
 	private String answer;
 	
-	
-	
-	
+
 	public int getAnswerId() {
 		return answerId;
 	}
